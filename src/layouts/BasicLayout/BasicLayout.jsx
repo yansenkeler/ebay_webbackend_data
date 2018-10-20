@@ -18,7 +18,7 @@ export default class BasicLayout extends Component {
     super(props);
     this.state = {
       isMobile: false,
-      open: false
+      open: false,
     };
   }
 
@@ -42,6 +42,7 @@ export default class BasicLayout extends Component {
 
   render() {
     const { isMobile } = this.state;
+    console.log('drawer status', this.state.open);
 
     if (isMobile) {
       return (
@@ -54,6 +55,7 @@ export default class BasicLayout extends Component {
 
           <Layout.Section>
             <TopBar
+              drawerIcon={this.state.open ? 'arrow-right' : 'mulu'}
               onToggleDrawer={() => this.onOpenChange()}
               hasDrawer={true}
               title={this.props.title}

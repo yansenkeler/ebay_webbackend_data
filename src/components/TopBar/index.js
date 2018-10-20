@@ -7,14 +7,22 @@ import IceImg from '@icedesign/img';
 import { Link } from 'react-router-dom';
 import './index.scss';
 import cx from 'classnames';
+import CustomIcon from "../../utils/CustomIcon";
 
 export default class TopBar extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
       isMobile: false,
+      drawerIcon: props.drawerIcon
     };
   }
+
+
+  componentWillReceiveProps = (nextProps) => {
+      this.setState({drawerIcon: nextProps.drawerIcon});
+  };
+
 
   componentDidMount() {
     this.enquireScreenRegister();
@@ -47,7 +55,7 @@ export default class TopBar extends PureComponent {
           <span className={cx({
             'hide': this.props.hasDrawer !== true,
           })}>
-            {isMobile ? <FoundationSymbol type="menu" onClick={() => this.onToggleDrawer()}/> : ''}
+            {isMobile ? <CustomIcon type={this.state.drawerIcon} onClick={() => this.onToggleDrawer()} className='top-bar-icon'/> : ''}
           </span>
         </span>
         <span style={isMobile ? { ...styles.mobileTitle } : { ...styles.title }} className="top-bar-title"
