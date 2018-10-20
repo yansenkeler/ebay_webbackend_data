@@ -1,0 +1,19 @@
+import React, { Component } from 'react';
+import AccountPanel from './components/AccountPanel';
+
+export default class PayBill extends Component {
+  static displayName = 'PayBill';
+
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  render() {
+    return (
+      <div className="pay-bill-page">
+        <AccountPanel />
+      </div>
+    );
+  }
+}
