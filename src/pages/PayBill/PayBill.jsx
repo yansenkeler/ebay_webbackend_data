@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import AccountPanel from './components/AccountPanel';
 
 export default class PayBill extends Component {
   static displayName = 'PayBill';
@@ -12,7 +11,6 @@ export default class PayBill extends Component {
   render() {
     return (
       <div className="pay-bill-page">
-        <AccountPanel />
       </div>
     );
   }

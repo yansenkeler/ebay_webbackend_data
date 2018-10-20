@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import AssetInfoDisplay from './components/AssetInfoDisplay';
 
 export default class FanReport extends Component {
   static displayName = 'FanReport';
@@ -12,7 +11,6 @@ export default class FanReport extends Component {
   render() {
     return (
       <div className="fan-report-page">
-        <AssetInfoDisplay />
       </div>
     );
   }

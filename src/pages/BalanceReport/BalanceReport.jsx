@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import AccountBadge from './components/AccountBadge';
 
 export default class BalanceReport extends Component {
   static displayName = 'BalanceReport';
@@ -12,7 +11,6 @@ export default class BalanceReport extends Component {
   render() {
     return (
       <div className="balance-report-page">
-        <AccountBadge />
       </div>
     );
   }

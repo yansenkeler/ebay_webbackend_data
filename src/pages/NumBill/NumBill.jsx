@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ContentList from './components/ContentList';
 
 export default class NumBill extends Component {
   static displayName = 'NumBill';
@@ -12,7 +11,6 @@ export default class NumBill extends Component {
   render() {
     return (
       <div className="num-bill-page">
-        <ContentList />
       </div>
     );
   }

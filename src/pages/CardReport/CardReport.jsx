@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import AccountStatus from './components/AccountStatus';
 
 export default class CardReport extends Component {
   static displayName = 'CardReport';
@@ -12,7 +11,6 @@ export default class CardReport extends Component {
   render() {
     return (
       <div className="card-report-page">
-        <AccountStatus />
       </div>
     );
   }

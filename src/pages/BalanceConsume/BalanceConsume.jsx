@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import SearchTable from './components/SearchTable';
 
 export default class BalanceConsume extends Component {
   static displayName = 'BalanceConsume';
@@ -12,7 +11,6 @@ export default class BalanceConsume extends Component {
   render() {
     return (
       <div className="balance-consume-page">
-        <SearchTable />
       </div>
     );
   }

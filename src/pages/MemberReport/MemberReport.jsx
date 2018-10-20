@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import AblityItems from './components/AblityItems';
 
 export default class MemberReport extends Component {
   static displayName = 'MemberReport';
@@ -12,7 +11,6 @@ export default class MemberReport extends Component {
   render() {
     return (
       <div className="member-report-page">
-        <AblityItems />
       </div>
     );
   }

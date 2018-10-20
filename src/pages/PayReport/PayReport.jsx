@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import NotPermission from './components/NotPermission';
 
 export default class PayReport extends Component {
   static displayName = 'PayReport';
@@ -12,7 +11,6 @@ export default class PayReport extends Component {
   render() {
     return (
       <div className="pay-report-page">
-        <NotPermission />
       </div>
     );
   }

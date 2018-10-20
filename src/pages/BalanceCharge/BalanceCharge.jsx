@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PlatformIntro from './components/PlatformIntro';
 
 export default class BalanceCharge extends Component {
   static displayName = 'BalanceCharge';
@@ -12,7 +11,6 @@ export default class BalanceCharge extends Component {
   render() {
     return (
       <div className="balance-charge-page">
-        <PlatformIntro />
       </div>
     );
   }

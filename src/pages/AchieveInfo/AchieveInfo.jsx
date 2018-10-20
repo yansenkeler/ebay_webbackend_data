@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ApplicationProgress from './components/ApplicationProgress';
 
 export default class AchieveInfo extends Component {
   static displayName = 'AchieveInfo';
@@ -12,7 +11,6 @@ export default class AchieveInfo extends Component {
   render() {
     return (
       <div className="achieve-info-page">
-        <ApplicationProgress />
       </div>
     );
   }

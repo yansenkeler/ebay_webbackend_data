@@ -1,3 +1,4 @@
+import {enquireScreen} from "enquire-js";
 import React, { Component } from 'react';
 import IceContainer from '@icedesign/container';
 import CustomIcon from "../../../../utils/CustomIcon";
@@ -80,7 +81,29 @@ const list = [
 export default class EntryCard extends Component {
   static displayName = 'EntryCard';
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      isMobile: false
+    };
+  }
+
+  componentDidMount() {
+    this.enquireScreenRegister();
+  }
+
+  enquireScreenRegister = () => {
+    const mediaCondition = 'only screen and (max-width: 720px)';
+
+    enquireScreen((mobile) => {
+      this.setState({
+        isMobile: mobile,
+      });
+    }, mediaCondition);
+  };
+
   render() {
+    const {isMobile} = this.state;
     return (
       <IceContainer
         className="entry-card"
@@ -88,12 +111,13 @@ export default class EntryCard extends Component {
           display: 'flex',
           flexDirection: 'row',
           flexWrap: 'wrap',
+          marginBottom: '0'
         }}
       >
         {list.map((item, index) => {
           let url = this.props.match.url + item.url;
           return (
-            <div key={index} style={styles.item}>
+            <div key={index} style={isMobile ? styles.itemMobile : styles.item}>
               <Link to={url}>
                 <CustomIcon type={item.img}/>
                 {/*<img src={item.img} style={styles.cover} alt={item.title} />*/}
@@ -114,6 +138,14 @@ const styles = {
     alignItems: 'center',
     width: '70px',
     margin: '10px 40px',
+    textAlign: 'center'
+  },
+  itemMobile: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    width: '33%',
+    margin: '20px 0',
     textAlign: 'center'
   },
   link: {
